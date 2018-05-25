@@ -7,28 +7,19 @@ function Ball(startingPos, _radius){
 	
 	this.vel = createVector();
 	this.acc = createVector();
-<<<<<<< HEAD
 	this.gravity = createVector(0.01, 0);
 	this.col = (255, 255, 255);
-=======
-	this.gravity = createVector(0, 0.5);
->>>>>>> 8c6edcf296e75ed053bdb60f7ef4859c1110f71d
 	if(_radius){
 		this.r = _radius;
 	} else{
 		this.r = 25;
 	}
-<<<<<<< HEAD
-=======
-	this.col = 255;
->>>>>>> 8c6edcf296e75ed053bdb60f7ef4859c1110f71d
 	
 	this.applyForce = function(force){
 		this.acc.add(force);
 	}
 
 	this.update = function(){
-<<<<<<< HEAD
 		this.applyForce(this.gravity);
 		this.vel.add(this.acc);
 		this.pos.add(this.vel);
@@ -46,22 +37,12 @@ function Ball(startingPos, _radius){
 		if(this.pos.y < 0){
 			this.pos.y = height;
 		}
-=======
-		//this.applyForce(this.gravity);
-		this.vel.add(this.acc);
-		this.pos.add(this.vel);
-		this.acc.mult(0);
->>>>>>> 8c6edcf296e75ed053bdb60f7ef4859c1110f71d
 	}
 
 	this.show = function(){
 		push();
 		rotate(this.vel.heading());
-<<<<<<< HEAD
 		fill(this.col);
-=======
-		fill(this.col );
->>>>>>> 8c6edcf296e75ed053bdb60f7ef4859c1110f71d
 		stroke(255);
 		ellipse(this.pos.x, this.pos.y, 2*this.r);
 		pop();
